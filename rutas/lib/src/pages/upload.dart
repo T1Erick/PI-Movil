@@ -12,9 +12,9 @@ class _ImagePageState extends State<ImagePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         title: const Text('Comparte Tus Imagenes',
+         title: const Text('Comparte Tus Animales',
         style: TextStyle(
-                fontSize: 50.0,
+                fontSize: 30.0,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
                 fontFamily: 'RobotoMono'),),
@@ -44,7 +44,7 @@ class _ImagePageState extends State<ImagePage> {
           onPressed: () {
             // Acción a realizar cuando se presione el botón
           },
-          child: const Text('Seleccionar Imagen'),
+          child: const Text('Publicar'),
         ),
       ],
     ),

@@ -14,11 +14,19 @@ class Nav extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               child: ClipOval(child: Image.asset('images/perfil.jpg')),
             ),
+            decoration: BoxDecoration(
+              
+
+              gradient: LinearGradient(
+                begin:Alignment.topCenter,
+                end: Alignment.bottomCenter,
+               colors: [Color.fromARGB(255, 233, 133, 61),Color.fromARGB(255,27,27,27)])
+            ),
           ),
           ListTile(
             leading: Icon(Icons.file_upload),
             title: Text('Subir fotos'),
-            onTap: () => Navigator.popAndPushNamed(context, '/Imagenes'),
+            onTap: () => Navigator.popAndPushNamed(context, '/Publicaciones'),
           ),
           ListTile(
             leading: Icon(Icons.account_circle),
@@ -31,10 +39,16 @@ class Nav extends StatelessWidget {
             onTap: () => Navigator.popAndPushNamed(context, '/Notificaciones'),
           ),
           ListTile(
-            leading: Icon(Icons.dangerous),
+            leading: Icon(Icons.qr_code),
             title: Text('Lector De Barras'),
             onTap: () => Navigator.popAndPushNamed(context, '/LectorDeBarras'),
           ),
+          ListTile(
+            leading: Icon(Icons.shop),
+            title: Text('Tienda'),
+            onTap: () => Navigator.popAndPushNamed(context, '/Servicios'),
+          ),
+         
         ],
       ),
     );

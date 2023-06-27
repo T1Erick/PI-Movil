@@ -25,6 +25,21 @@ class _ServiciosPagesState extends State<ServiciosPages> {
       price: "300",
       image: "images/comida3.png",
     ),
+    Product(
+      name: "Alimento de perros",
+      price: "50",
+      image: "images/comidaperros.jpg",
+    ),
+    Product(
+      name: "Alimento de aves",
+      price: "30",
+      image: "images/comidaAves.jpg",
+    ),
+    Product(
+      name: "Collares para Gatos con nombres ",
+      price: "10",
+      image: "images/collar3.jpg",
+    ),
   ];
 
   @override
@@ -74,11 +89,17 @@ class _ServiciosPagesState extends State<ServiciosPages> {
                       print("Agregando ${products[index].name}");
                     },
                   ),
+                  
                 ],
               ),
+              
             );
+            
+            
           },
+          
         ),
+        
       ),
     );
           }

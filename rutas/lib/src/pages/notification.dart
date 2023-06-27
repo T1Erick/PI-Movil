@@ -32,7 +32,7 @@ class _NotificationPageState extends State<NotificationPage> {
       appBar: AppBar(
         title: Text('Bienvenido a tus notificaciones',
         style: TextStyle(
-                fontSize: 50.0,
+                fontSize: 30.0,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
                 fontFamily: 'RobotoMono'),),
