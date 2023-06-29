@@ -37,7 +37,7 @@ class _ImagePageState extends State<ImagePage> {
       children: <Widget>[
         const CircleAvatar(
           radius: 50.0,
-          backgroundImage: AssetImage('images/gato.jpeg'),
+          backgroundImage: AssetImage('assets/images/gato.jpeg'),
         ),
         const SizedBox(height: 20.0),
         ElevatedButton(

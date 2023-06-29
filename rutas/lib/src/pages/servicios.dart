@@ -13,32 +13,32 @@ class _ServiciosPagesState extends State<ServiciosPages> {
     Product(
       name: "Collar para Gatos",
       price: "100",
-      image: "images/collar1.png",
+      image: "assets/images/collar1.png",
     ),
     Product(
       name: "Alimento de Cachorros",
       price: "200",
-      image: "images/comida2.png",
+      image: "assets/images/comida2.png",
     ),
     Product(
       name: "Alimento de Gatos",
       price: "300",
-      image: "images/comida3.png",
+      image: "assets/images/comida3.png",
     ),
     Product(
       name: "Alimento de perros",
       price: "50",
-      image: "images/comidaperros.jpg",
+      image: "assets/images/comidaperros.jpg",
     ),
     Product(
       name: "Alimento de aves",
       price: "30",
-      image: "images/comidaAves.jpg",
+      image: "assets/images/comidaAves.jpg",
     ),
     Product(
       name: "Collares para Gatos con nombres ",
       price: "10",
-      image: "images/collar3.jpg",
+      image: "assets/images/collar3.jpg",
     ),
   ];
 
@@ -50,7 +50,7 @@ class _ServiciosPagesState extends State<ServiciosPages> {
         title: const Text(
           'Tienda',
           style: TextStyle(
-              fontSize: 40.0,
+              fontSize: 30.0,
               fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 255, 255, 255)),
         ),

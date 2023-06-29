@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
           title: const Text(
             'Iniciar Sesión',
             style: TextStyle(
-                fontSize: 50.0,
+                fontSize: 30.0,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
                 fontFamily: 'RobotoMono'),
@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     CircleAvatar(
                       radius: 100.0,
                       backgroundColor: Colors.amberAccent,
-                      backgroundImage: AssetImage('images/descarga.jpg'),
+                      backgroundImage: AssetImage('assets/images/descarga.jpg'),
                     ),
                     Text(
                       'Login',

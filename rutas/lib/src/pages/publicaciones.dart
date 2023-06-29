@@ -9,23 +9,22 @@ class Post {
 }
 
 class PostPage extends StatelessWidget {
-  TextEditingController _tituloController = TextEditingController();
-  TextEditingController _descripcionController = TextEditingController();
+
   final List<Post> posts = [
   Post(
     title: 'Post 1',
     body: 'Hernoso compartir con nuestras mascotas',
-    image: 'images/public.jpg', // Ruta de la imagen para el primer post
+    image: 'assets/images/public.jpg', // Ruta de la imagen para el primer post
   ),
   Post(
     title: 'Post 2',
     body: 'Mi bella mascota.',
-    image: 'images/public2.jpg', // Ruta de la imagen para el segundo post
+    image: 'assets/images/public2.jpg', // Ruta de la imagen para el segundo post
   ),
   Post(
     title: 'Post 3',
     body: 'Un gatito feliz.',
-    image: 'images/gato.jpeg', // Ruta de la imagen para el tercer post
+    image: 'assets/images/gato.jpeg', // Ruta de la imagen para el tercer post
   ),
 ];
 
@@ -36,7 +35,7 @@ class PostPage extends StatelessWidget {
         title: const Text(
           'Tus Publicaciones',
           style: TextStyle(
-            fontSize: 50.0,
+            fontSize: 30.0,
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 255, 255, 255),
             fontFamily: 'RobotoMono',

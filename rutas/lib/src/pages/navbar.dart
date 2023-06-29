@@ -12,7 +12,7 @@ class Nav extends StatelessWidget {
             accountName: Text('ErickGuevara'),
             accountEmail: Text('ead.guevara@yavirac.edu.ec'),
             currentAccountPicture: CircleAvatar(
-              child: ClipOval(child: Image.asset('images/perfil.jpg')),
+              child: ClipOval(child: Image.asset('assets/images/perfil.jpg')),
             ),
             decoration: BoxDecoration(
               

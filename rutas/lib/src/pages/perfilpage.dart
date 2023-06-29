@@ -16,7 +16,7 @@ class _PerfilPageState extends State<PerfilPage> {
         title: const Text(
           'Mi Perfil',
           style: TextStyle(
-              fontSize: 40.0,
+              fontSize: 30.0,
               fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 255, 255, 255)),
         ),
@@ -39,7 +39,7 @@ class _PerfilPageState extends State<PerfilPage> {
             CircleAvatar(
                       radius: 100.0,
                       backgroundColor: Colors.amberAccent,
-                      backgroundImage: AssetImage('images/logo.jpg'),
+                      backgroundImage: AssetImage('assets/images/logo.jpg'),
                     ),
             Text(
               '"Pet Center" ',

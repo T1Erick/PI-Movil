@@ -3,7 +3,7 @@ import 'package:rutas/src/pages/lectordebarraspage.dart';
 import 'package:rutas/src/pages/homepage.dart';
 import 'package:rutas/src/pages/login.dart';
 import 'package:rutas/src/pages/notification.dart';
-import 'package:rutas/src/pages/otrapagina.dart';
+
 import 'package:rutas/src/pages/page404.dart';
 import 'package:rutas/src/pages/perfilpage.dart';
 import 'package:rutas/src/pages/publicaciones.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     '/Home':(context) => HomePages(),
     '/Login':(context) => LoginPage(),
     '/Register':(context) => RegisterPage(),
-    '/Otra':(context) => ImageSharingPage(),
+    '/Otra':(context) => ImagePage(),
     '/Servicios':(context) => ServiciosPages(),
     '/Perfil':(context) => PerfilPage(),
     '/LectorDeBarras':(context) => CodigoPage(),

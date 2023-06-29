@@ -16,9 +16,9 @@ class _HomePagesState extends State<HomePages> {
       drawer: Nav(),
       appBar: AppBar(
         title: Text(
-          'Pet Center - Tu Tienda Virtual',
+          'Pet Center',
           style: TextStyle(
-            fontSize: 24.0,
+            fontSize: 30.0,
             fontWeight: FontWeight.bold,
             color: Colors.white,
             fontFamily: 'RobotoMono',
@@ -43,7 +43,7 @@ class _HomePagesState extends State<HomePages> {
             CircleAvatar(
               radius: 100.0,
               backgroundColor: Colors.amberAccent,
-              backgroundImage: AssetImage('images/logo.jpg'),
+              backgroundImage: AssetImage('assets/images/logo.jpg'),
             ),
             SizedBox(height: 20),
             Text(
@@ -59,7 +59,7 @@ class _HomePagesState extends State<HomePages> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                     image: DecorationImage(
-                      image: AssetImage('images/collar2.png'),
+                      image: AssetImage('assets/images/collar2.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -70,7 +70,7 @@ class _HomePagesState extends State<HomePages> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                     image: DecorationImage(
-                      image: AssetImage('images/collar1.png'),
+                      image: AssetImage('assets/images/collar1.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -81,7 +81,7 @@ class _HomePagesState extends State<HomePages> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                     image: DecorationImage(
-                      image: AssetImage('images/comida2.png'),
+                      image: AssetImage('assets/images/comida2.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -92,7 +92,7 @@ class _HomePagesState extends State<HomePages> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                     image: DecorationImage(
-                      image: AssetImage('images/collar2.png'),
+                      image: AssetImage('assets/images/collar2.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -103,7 +103,7 @@ class _HomePagesState extends State<HomePages> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                     image: DecorationImage(
-                      image: AssetImage('images/comida3.png'),
+                      image: AssetImage('assets/images/comida3.png'),
                       fit: BoxFit.cover,
                     ),
                   ),

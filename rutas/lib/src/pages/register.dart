@@ -22,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: AppBar(
         title: Text('Registro',
                 style: TextStyle(
-                fontSize: 50.0,
+                fontSize: 30.0,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
                 fontFamily: 'RobotoMono'),
@@ -49,7 +49,7 @@ class _RegisterPageState extends State<RegisterPage> {
               CircleAvatar(
                       radius: 100.0,
                       backgroundColor: Colors.amberAccent,
-                      backgroundImage: AssetImage('images/descarga.jpg'),
+                      backgroundImage: AssetImage('assets/images/descarga.jpg'),
                     ),
               TextField(
                 controller: _nameController,

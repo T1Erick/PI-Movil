@@ -76,7 +76,7 @@ class _ImageSharingPageState extends State<ImageSharingPage> {
         title: const Text(
           'Compartir imagen',
           style: TextStyle(
-            fontSize: 50.0,
+            fontSize: 30.0,
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 255, 255, 255),
             fontFamily: 'RobotoMono',
