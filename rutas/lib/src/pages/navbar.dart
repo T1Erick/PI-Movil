@@ -25,7 +25,7 @@ class Nav extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.file_upload),
-            title: Text('Subir fotos'),
+            title: Text('Publicaciones'),
             onTap: () => Navigator.popAndPushNamed(context, '/Publicaciones'),
           ),
           ListTile(
@@ -47,6 +47,11 @@ class Nav extends StatelessWidget {
             leading: Icon(Icons.shop),
             title: Text('Tienda'),
             onTap: () => Navigator.popAndPushNamed(context, '/Servicios'),
+          ),
+          ListTile(
+            leading: Icon(Icons.post_add),
+            title: Text('Subir Foto'),
+            onTap: () => Navigator.popAndPushNamed(context, '/Otra'),
           ),
          
         ],

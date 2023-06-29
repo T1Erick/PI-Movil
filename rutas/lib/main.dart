@@ -6,6 +6,7 @@ import 'package:rutas/src/pages/notification.dart';
 import 'package:rutas/src/pages/otrapagina.dart';
 import 'package:rutas/src/pages/page404.dart';
 import 'package:rutas/src/pages/perfilpage.dart';
+import 'package:rutas/src/pages/publicaciones.dart';
 import 'package:rutas/src/pages/register.dart';
 import 'package:rutas/src/pages/servicios.dart';
 import 'package:rutas/src/pages/upload.dart';
@@ -19,13 +20,13 @@ class MyApp extends StatelessWidget {
     '/Home':(context) => HomePages(),
     '/Login':(context) => LoginPage(),
     '/Register':(context) => RegisterPage(),
-    '/Otra':(context) => OtraPage(),
+    '/Otra':(context) => ImageSharingPage(),
     '/Servicios':(context) => ServiciosPages(),
     '/Perfil':(context) => PerfilPage(),
     '/LectorDeBarras':(context) => CodigoPage(),
     '/Imagenes':(context) => ImagePage(),
     '/Notificaciones':(context) => NotificationPage(),
-    
+    '/Publicaciones':(context) => PostPage(),
   };
 
   @override
