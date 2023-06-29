@@ -30,12 +30,15 @@ class _RegisterPageState extends State<RegisterPage> {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 12, 12, 12)),
       body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(colors:<Color>[ 
+         decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: <Color>[
               Color.fromARGB(255, 249, 248, 250),
-              Color.fromARGB(255, 233, 133, 61)],
-              begin: Alignment.topRight
-            )),
+              Color.fromARGB(255, 233, 133, 61),
+            ],
+            begin: Alignment.topRight,
+          ),
+        ),
         child: ListView(
           
           children:<Widget> [

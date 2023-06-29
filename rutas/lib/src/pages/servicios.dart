@@ -57,48 +57,59 @@ class _ServiciosPagesState extends State<ServiciosPages> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 11, 11, 11),
       ),
-      body: ListView.builder(
-          itemCount: products.length,
-          itemBuilder: (BuildContext context, int index) {
-            return  Container(
-              padding: EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Image.asset(
-                    products[index].image,
-                    width: 80.0,
-                    height: 80.0,
-                  ),
-                  SizedBox(width: 16.0),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          products[index].name,
-                          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                        ),
-                        Text("Precio: \$${products[index].price}"),
-                      ],
-                    ),
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.add),
-                    onPressed: () {
-                      // Lógica para agregar un producto aquí
-                      print("Agregando ${products[index].name}");
-                    },
-                  ),
-                  
-                ],
-              ),
-              
-            );
-            
-            
-          },
-          
+      body: Container(
+         decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: <Color>[
+              Color.fromARGB(255, 249, 248, 250),
+              Color.fromARGB(255, 233, 133, 61),
+            ],
+            begin: Alignment.topRight,
+          ),
         ),
+        child: ListView.builder(
+            itemCount: products.length,
+            itemBuilder: (BuildContext context, int index) {
+              return  Container(
+                padding: EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      products[index].image,
+                      width: 80.0,
+                      height: 80.0,
+                    ),
+                    SizedBox(width: 16.0),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            products[index].name,
+                            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                          ),
+                          Text("Precio: \$${products[index].price}"),
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.add),
+                      onPressed: () {
+                        // Lógica para agregar un producto aquí
+                        print("Agregando ${products[index].name}");
+                      },
+                    ),
+                    
+                  ],
+                ),
+                
+              );
+              
+              
+            },
+            
+          ),
+      ),
         
       ),
     );

@@ -9,6 +9,8 @@ class Post {
 }
 
 class PostPage extends StatelessWidget {
+  TextEditingController _tituloController = TextEditingController();
+  TextEditingController _descripcionController = TextEditingController();
   final List<Post> posts = [
   Post(
     title: 'Post 1',
@@ -29,7 +31,7 @@ class PostPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       appBar: AppBar(
         title: const Text(
           'Tus Publicaciones',
@@ -53,31 +55,45 @@ class PostPage extends StatelessWidget {
             begin: Alignment.topRight,
           ),
         ),
-        child: ListView.builder(
-          itemCount: posts.length,
-          itemBuilder: (context, index) {
-            final post = posts[index];
-            return Card(
-              margin: EdgeInsets.all(8),
-              child: ListTile(
-                title: Text(post.title),
-                subtitle: Text(post.body),
-                leading: Image.asset(
-                  post.image,
-                  width: 800,
-                  height: 500,
-                ),
-                onTap: () {
-                  // Acción al hacer clic en una publicación
-                  print('Clic en la publicación: ${post.title}');
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: posts.length,
+                itemBuilder: (context, index) {
+                  final post = posts[index];
+                  return Card(
+                    margin: EdgeInsets.all(8),
+                    child: ListTile(
+                      title: Text(
+                        post.title,
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      subtitle: Text(post.body),
+                      leading: Image.asset(
+                        post.image,
+                        width: 800,
+                        height: 500,
+                      ),
+                      onTap: () {
+                        // Acción al hacer clic en una publicación
+                        print('Clic en la publicación: ${post.title}');
+                      },
+                    ),
+                  );
                 },
               ),
-            );
-          },
+            ),
+          ],
         ),
       ),
     );
   }
+ 
+  
 }
 
 void main() {
