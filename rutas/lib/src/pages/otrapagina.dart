@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:http/http.dart' as http;
 
 class ImageSharingPage extends StatefulWidget {
   @override
@@ -8,7 +9,44 @@ class ImageSharingPage extends StatefulWidget {
 }
 
 class _ImageSharingPageState extends State<ImageSharingPage> {
+  List<String> dataList = [];
   File? _image;
+  @override
+  void initState() {
+    super.initState();
+    fetchData(); // Llama a la función fetchData al inicializar la pantalla
+  }
+
+  void fetchData() async {
+    var url = Uri.parse('https://cataas.com/api/cats');
+
+    try {
+      var response = await http.get(url);
+
+      if (response.statusCode == 200) {
+        // La solicitud fue exitosa, procesa los datos aquí
+        // Por ejemplo, puedes almacenar los datos en una lista
+        setState(() {
+          dataList = processData(response.body);
+        });
+      } else {
+        // La solicitud falló con un código de estado diferente de 200
+        print('Error: ${response.statusCode}');
+      }
+    } catch (e) {
+      // Ocurrió un error durante la solicitud
+      print('Error: $e');
+    }
+  }
+
+  List<String> processData(String responseBody) {
+    // Implementa la lógica para procesar los datos de la API aquí
+    // Por ejemplo, puedes convertir el cuerpo de la respuesta en una lista de strings
+    // y devolverla
+    // return ...
+
+    return [];
+  }
 
   Future<void> _pickImage(ImageSource source) async {
     final picker = ImagePicker();
@@ -21,6 +59,7 @@ class _ImageSharingPageState extends State<ImageSharingPage> {
   }
 
   void _shareImage() {
+    
     if (_image != null) {
       // Lógica para compartir la imagen
       // Aquí puedes implementar el código para compartir la imagen en redes sociales, enviarla por correo electrónico, etc.
@@ -56,30 +95,13 @@ class _ImageSharingPageState extends State<ImageSharingPage> {
             begin: Alignment.topRight,
           ),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (_image != null)
-                Image.file(
-                  _image!,
-                  width: 200,
-                  height: 200,
-                ),
-              ElevatedButton(
-                onPressed: () => _pickImage(ImageSource.camera),
-                child: Text('Tomar Foto'),
-              ),
-              ElevatedButton(
-                onPressed: () => _pickImage(ImageSource.gallery),
-                child: Text('Seleccionar de la Galería'),
-              ),
-              ElevatedButton(
-                onPressed: _shareImage,
-                child: Text('Compartir Imagen'),
-              ),
-            ],
-          ),
+        child: ListView.builder(
+          itemCount: dataList.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(dataList[index]),
+            );
+            },
         ),
       ),
     );
